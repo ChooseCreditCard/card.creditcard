@@ -2,40 +2,254 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Redirecting…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Fast redirect -->
-  <meta http-equiv="refresh"
-        content="0.2; url=https://choose.creditcard/?utm_source=card.creditcard&utm_medium=redirect&utm_campaign=creditcard_collection">
+  <title>Card.Creditcard – What a Credit Card Actually Is</title>
+  <meta name="description" content="Neutral, documentation-style explanation of what a credit card is: account vs. card, networks, issuers, limits, authorizations and statements. No recommendations, no approval advice." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://card.creditcard/" />
 
-  <!-- Canonical -->
-  <link rel="canonical"
-        href="https://choose.creditcard/?utm_source=card.creditcard&utm_medium=redirect&utm_campaign=creditcard_collection" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Card.Creditcard – Credit Cards Explained" />
+  <meta property="og:description" content="Learn how credit cards work at a structural level: accounts, cards, limits, authorizations, statements and key actors in the system." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://card.creditcard/" />
+  <meta property="og:image" content="https://choose.creditcard/preview.png?utm_source=card.creditcard&utm_medium=referral&utm_campaign=og_image" />
 
-  <!-- Prevent indexing -->
-  <meta name="robots" content="noindex,follow" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Card.Creditcard – Credit Cards Explained" />
+  <meta name="twitter:description" content="Documentation-style explainer of what a credit card is and how it behaves over time, without personal advice or rankings." />
+  <meta name="twitter:image" content="https://choose.creditcard/preview.png?utm_source=card.creditcard&utm_medium=referral&utm_campaign=twitter_image" />
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-64FE63JQ3H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-64FE63JQ3H', {
-      'page_title': 'Redirect card.creditcard',
-      'page_path': '/redirect/card.creditcard'
-    });
+    gtag('config', 'G-64FE63JQ3H');
   </script>
 
-  <!-- Dark background -->
-  <style>
-    html, body {
-      background: #020617;
-      color: #020617;
-      margin: 0;
-      height: 100vh;
-    }
-  </style>
+  <!-- Tailwind for utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Shared minisite styles -->
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-<body></body>
+<body class="bg-slate-950 text-slate-100">
+  <header class="site-header">
+    <div class="nav-inner max-w-6xl">
+      <div class="brand">
+        <div class="cc-logo">CC</div>
+        <div class="brand-text">
+          <div class="brand-title">Card.Creditcard</div>
+          <div class="brand-subtitle">Credit Cards Explained in Documentation Terms</div>
+        </div>
+      </div>
+      <nav class="nav-links" aria-label="Page navigation">
+        <a href="#overview">Overview</a>
+        <a href="#mechanics">How It Works</a>
+        <a href="#compare">Compare</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cc-page">
+    <!-- Breadcrumb -->
+    <div class="cc-breadcrumb">
+      <a href="https://choose.creditcard/?utm_source=card.creditcard&utm_medium=referral&utm_campaign=breadcrumb">Home</a>
+      &nbsp;›&nbsp;
+      Card.Creditcard
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>What a Credit Card Actually Is</h1>
+        <p class="hero-lead">
+          A credit card is more than a plastic or digital token. It is a contract, a revolving line of credit and a data connection into payment networks. This page explains the structure in neutral, documentation-style language — not recommendations or approval advice.
+        </p>
+        <a class="cta" href="https://choose.creditcard/guides/?utm_source=card.creditcard&utm_medium=referral&utm_campaign=hero_cta">
+          Explore core guides on Choose.Creditcard
+        </a>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section id="overview" class="section">
+      <h2>Card vs. Account vs. Network</h2>
+      <p>In everyday language, “credit card” often refers to the physical card, the account and the payment network as if they were a single thing. In documentation, these are distinct components.</p>
+      <p>
+        A <strong>card account</strong> is a revolving credit line with its own number, terms and conditions.
+        The <strong>card itself</strong> (physical or virtual) is a credential used to access that line.
+        The <strong>network</strong> (for example a major scheme) provides the rails that connect issuers, merchants and acquirers.
+      </p>
+      <p>Understanding this separation makes it easier to read agreements, pricing tables and network rules without confusion.</p>
+    </section>
+
+    <!-- Mechanics -->
+    <section id="mechanics" class="section">
+      <h2>Key Elements of a Credit Card</h2>
+      <p>Most credit-card products, regardless of branding, share a common set of structural elements. Documentation usually covers at least the following:</p>
+      <ul class="list">
+        <li><strong>Credit limit</strong> – the maximum amount that can be outstanding at one time.</li>
+        <li><strong>APR and pricing</strong> – interest rates, fees and the rules for when they apply.</li>
+        <li><strong>Billing cycle</strong> – how often statements are issued and when payments are due.</li>
+        <li><strong>Grace period</strong> – conditions under which purchases do not accrue interest.</li>
+        <li><strong>Transaction types</strong> – purchases, cash advances, balance transfers and fees.</li>
+        <li><strong>Rewards and benefits</strong> – if included, how points, miles or cashback accumulate and can change.</li>
+      </ul>
+      <p>These building blocks define how the card behaves over time, even when marketing focuses on a few headline benefits.</p>
+    </section>
+
+    <section class="section">
+      <h2>The Lifecycle of a Card Transaction</h2>
+      <p>When you use a credit card, several steps occur in sequence:</p>
+      <ul class="list">
+        <li>An authorization request is sent from the merchant, through the acquirer and network, to the issuer.</li>
+        <li>The issuer checks available limit, risk signals and other rules before approving or declining.</li>
+        <li>If approved, the transaction later settles and posts as a debit on your account.</li>
+        <li>At the end of the cycle, the transaction appears on your statement with a due date.</li>
+      </ul>
+      <p>Additional rules apply if the transaction is refunded, disputed or adjusted, which is why statements and agreements devote sections to these scenarios.</p>
+    </section>
+
+    <section class="section">
+      <h2>How a Credit Card Appears in Documentation</h2>
+      <p>Different documents describe different aspects of the same product:</p>
+      <ul class="list">
+        <li><strong>Cardholder agreement</strong> – core legal terms, rights and obligations.</li>
+        <li><strong>Pricing addendum</strong> – APR ranges, fees, FX margins and how they may change.</li>
+        <li><strong>Rewards terms</strong> – earn rates, caps, expiration rules and devaluation clauses.</li>
+        <li><strong>Benefit guides</strong> – protections, insurance and eligibility conditions.</li>
+        <li><strong>Network rules (high level)</strong> – dispute rights and acceptance rules.</li>
+      </ul>
+      <p>Reading these together gives a more complete picture than marketing summaries alone.</p>
+    </section>
+
+    <!-- Comparison table -->
+    <section id="compare" class="section">
+      <h2>Comparing Card Structures at a Glance</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Where It Lives</th>
+              <th>What It Controls</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Credit Line</td>
+              <td>Account setup &amp; underwriting</td>
+              <td>Maximum exposure, utilization and available spend.</td>
+            </tr>
+            <tr>
+              <td>Pricing</td>
+              <td>Cardholder agreement &amp; pricing schedule</td>
+              <td>Cost of borrowing, FX, cash advances and certain fees.</td>
+            </tr>
+            <tr>
+              <td>Rewards</td>
+              <td>Rewards terms &amp; loyalty program rules</td>
+              <td>How value is returned through points, miles or cashback.</td>
+            </tr>
+            <tr>
+              <td>Protections</td>
+              <td>Benefit guides &amp; network policies</td>
+              <td>Coverage for travel events, purchases and disputes.</td>
+            </tr>
+            <tr>
+              <td>Technology</td>
+              <td>Issuer channels &amp; wallet integrations</td>
+              <td>Access through apps, wallets, virtual cards and controls.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small">
+        For examples of how these elements are described across different topics and categories, visit
+        <a href="https://choose.creditcard/guides/?utm_source=card.creditcard&utm_medium=referral&utm_campaign=comparison_section">
+          the guides section on Choose.Creditcard
+        </a>.
+      </p>
+    </section>
+
+    <!-- Cluster links -->
+    <section class="section">
+      <h2>Explore Related Core-Concept Microsites</h2>
+      <div class="cluster-grid">
+        <a class="cluster-card" href="https://hub.creditcard/?utm_source=card.creditcard&utm_medium=referral&utm_campaign=cluster_hub">
+          <h3>Hub.Creditcard</h3>
+          <p>How The CreditCard Collection is structured around topics and hubs.</p>
+        </a>
+        <a class="cluster-card" href="https://network.creditcard/?utm_source=card.creditcard&utm_medium=referral&utm_campaign=cluster_network">
+          <h3>Network.Creditcard</h3>
+          <p>The role of payment networks in authorizations and settlement.</p>
+        </a>
+        <a class="cluster-card" href="https://apr.creditcard/?utm_source=card.creditcard&utm_medium=referral&utm_campaign=cluster_apr">
+          <h3>APR.Creditcard</h3>
+          <p>How interest and APR are defined in card agreements.</p>
+        </a>
+        <a class="cluster-card" href="https://protections.creditcard/?utm_source=card.creditcard&utm_medium=referral&utm_campaign=cluster_protections">
+          <h3>Protections.Creditcard</h3>
+          <p>Documentation-style view of card-based insurance and protections.</p>
+        </a>
+        <a class="cluster-card" href="https://evaluate.creditcard/?utm_source=card.creditcard&utm_medium=referral&utm_campaign=cluster_evaluate">
+          <h3>Evaluate.Creditcard</h3>
+          <p>Framework for evaluating card structures using documentation.</p>
+        </a>
+        <a class="cluster-card" href="https://comparecard.creditcard/?utm_source=card.creditcard&utm_medium=referral&utm_campaign=cluster_comparecard">
+          <h3>CompareCard.Creditcard</h3>
+          <p>How structured comparison pages are built from these elements.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Collection section -->
+    <section class="section">
+      <h2>Part of The CreditCard Collection</h2>
+      <p class="small">
+        Card.Creditcard is one spoke in <strong>The CreditCard Collection</strong> — a network of focused microsites operated by ronarn AS. Each site explains a single concept in clear, factual language and then connects you to independent educational hubs.
+      </p>
+      <p class="small">
+        We do not issue cards and we do not provide personalized recommendations. We summarize how credit cards are described in documentation and encourage readers to review their own agreements carefully.
+      </p>
+      <p class="small">
+        This site is informational only and does not provide financial, investment, tax or legal advice. Always rely on official product documentation and consider seeking independent guidance for your specific situation.
+      </p>
+
+      <!-- Guides / core concepts snippet -->
+      <p class="text-xs text-slate-500 mt-6">
+        This microsite is connected to the
+        <a href="https://choose.creditcard/guides/?utm_source=card.creditcard&utm_medium=referral&utm_campaign=hub_guides"
+           class="font-medium hover:text-slate-900">
+          Guides &amp; Core Concepts hub
+        </a>
+        on <a href="https://choose.creditcard/" class="font-medium hover:text-slate-900">Choose.Creditcard</a>,
+        where these structural elements are applied to specific card categories.
+      </p>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section">
+      <h2>Ready to Go Deeper Into Card Mechanics?</h2>
+      <p class="small">
+        Use Card.Creditcard as a starting point for how credit cards are structured — then explore the guides and hubs on Choose.Creditcard to see how the same concepts show up in rewards, fees, protections and more.
+      </p>
+      <a class="cta" href="https://choose.creditcard/guides/?utm_source=card.creditcard&utm_medium=referral&utm_campaign=bottom_cta">
+        Go to the Guides &amp; Core Concepts hub
+      </a>
+    </section>
+  </main>
+
+  <footer class="mini-footer">
+    <p class="mini-footer-main">© 2025 The CreditCard Collection — ronarn AS</p>
+    <p class="mini-footer-contact">
+      Contact: <a href="mailto:support@cc.creditcard">support@cc.creditcard</a>
+    </p>
+  </footer>
+</body>
 </html>
